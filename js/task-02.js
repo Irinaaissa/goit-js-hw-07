@@ -41,10 +41,21 @@ const images = [
   },
 ];
 
+
+
 const parentElement = document.querySelector(".gallery");
-
-
-
+images.forEach((image) => {
+  
+  const listItem = document.createElement('li');
+  const imgElement = document.createElement('img');
+  
+  imgElement.src = image.url;
+  imgElement.alt = image.alt;
+ 
+  listItem.append(imgElement);
+  
+  parentElement.append(listItem);
+});
 
 
 
